@@ -1321,8 +1321,9 @@ class ScraperControls {
 	}
 	
 	static void controlBigIfGetFullFixture(WebElement optGoals, int indexOfOptimalGoals, List<WebElement> divsGoals, WebDriver driver, main.Line twoAndHalf, 
-			ArrayList<main.Line> goalLines, GoalLines GLS, div25, float overOdds, float underOdds);
-	if (optGoals != null) {
+			ArrayList<main.Line> goalLines, GoalLines GLS, float overOdds, float underOdds){
+		
+		if (optGoals != null) {
 		int lower = (indexOfOptimalGoals - 6) < 0 ? 0 : (indexOfOptimalGoals - 6);
 		int higher = (indexOfOptimalGoals + 6) > (divsGoals.size() - 1) ? (divsGoals.size() - 1)
 				: (indexOfOptimalGoals + 6);
@@ -1352,6 +1353,7 @@ class ScraperControls {
 		controlTwoAndHalf(twoAndHalf, div25, goalLines, overOdds, underOdds);
 		
 		controlTwoAndHalfPart2(twoAndHalf, overOdds, underOdds);
+		}
 	}
 
 	static void controlTripleFloat(List<WebElement> rows, Odds pinnOdds) {
@@ -1422,3 +1424,4 @@ class ScraperControls {
 	
 	
 }//di classe
+
